@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Coal mix optimiser</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <h2 style="float: right;" onclick="window.open('https://www.ripik.ai', '_blank');">Ripik.ai</h2>
+        <h1 style="float: left;">Coal mix optimiser</h1>
+    </div>
+
+    <div class="wrapper">
+        <div class="card" id="coalDetails" style="height: 570px; overflow-y: auto;">
+            <h2>Coal details</h2>
+            <form id="coalDetailsForm">
+                <table id="coalDetailsTable">
+                </table>
+            </form>
+        </div>
+        <div class="false-card">
+            <div class="card" id="aggregate" style="height: 250px;">
+                <h2>Aggregate</h2>
+                <h3 id="rs-ton">Rs/ton of ideal mix: 0</h3>
+                <h3 id="kcal-kg">Kcal/kg of ideal mix: 0</h3>
+                <h3 id="rs-kcal">Rs/kcal of ideal mix: 0</h3>
+            </div>
+            <br>
+            <div class="card" style="height: 300px; overflow-y: auto;">
+                <h2>Ideal Mix</h2>
+                <table id="idealMixTable">
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

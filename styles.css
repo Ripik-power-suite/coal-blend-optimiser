@@ -1,0 +1,253 @@
+html {
+    overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    margin: 0;
+    padding: 0;   
+    text-align: center; 
+}
+
+.navbar {
+    width: 100%;
+    position: fixed top;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.navbar h2, .navbar h1 {
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: normal;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar h2:hover::before {
+    transform: scaleX(1);
+}
+
+.wrapper {
+    width: 95%;
+    margin: auto;
+    padding: 40px;
+    display: inline-flex;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+  
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+}
+  
+.login-box .user-box, .login-box .select-box {
+    position: relative;
+}
+  
+.login-box .user-box input, .login-box .select-box select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+    text-align: left;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .select-box label {
+    position: absolute;
+    top:-20px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #000;
+    font-size: 12px;
+}
+  
+form input[type="submit"], input[type="button"] {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+  
+form input[type="submit"]:hover, input[type="button"]:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.false-card {
+    padding: 40px;
+    /* background: #fff; */
+    box-sizing: border-box;
+    /* box-shadow: 0 5px 10px rgba(0,0,0,.3); */
+    border-radius: 10px;
+    margin: auto;
+}
+
+.card {
+    padding: 40px;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+}
+  
+.card h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+}
+  
+.card .user-box, .card .select-box {
+    position: relative;
+}
+  
+.card .user-box input, .card .select-box select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+    text-align: left;
+}
+
+.card .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.card .select-box label {
+    position: absolute;
+    top:-20px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.card .user-box input:focus ~ label,
+.card .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #000;
+    font-size: 12px;
+}
+
+input[type="number"], select {
+    width: 70%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 16px;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    background: transparent;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    border: none;
+    table-layout:fixed;
+    width:100%;
+}
+
+tr th {
+    color: #fff;
+    font-size: 18px;
+    word-wrap: break-word;
+    background-color: #333;
+    border: none;
+    padding: 8px;
+}
+
+tr {
+    border: none;
+    background-color: #f5f5f5;
+}
+
+td {
+    border: none;
+}
